@@ -1,0 +1,98 @@
+#te-tooltip {
+    position: fixed;
+    z-index: 2147483647;
+    width: 300px;
+    background: #0f1117;
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 8px 32px rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 13px;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    overflow: hidden;
+}
+
+#te-tooltip.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.te-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px 8px;
+    background: #1a1d2e;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.te-term {
+    font-weight: 700;
+    color: #a78bfa;
+    font-size: 13px;
+}
+
+.te-badge {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.35);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.te-body {
+    padding: 12px 14px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.65;
+    min-height: 48px;
+}
+
+.te-loading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.te-spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(167, 139, 250, 0.2);
+    border-top-color: #a78bfa;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.te-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 10px;
+}
+
+.te-close {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    font-size: 11px;
+    font-family: inherit;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: all 0.15s;
+}
+
+.te-close:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+}

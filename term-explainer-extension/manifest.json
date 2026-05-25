@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Giải Thích Thuật Ngữ",
+    "version": "1.0.0",
+    "description": "Bôi đen thuật ngữ để xem giải thích tức thì",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "tooltip.css"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
